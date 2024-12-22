@@ -211,3 +211,24 @@ Promise.all(brusselsSproutsSteps)
     document.querySelector("#brusselsSproutsImg").removeAttribute("hidden");
   })
   .catch((error) => console.log(error));
+
+/*
+Explanation:
+1.Array of Promises:
+An array of promises (brusselsSproutsSteps) is created, where each promise corresponds to one step of the Brussels Sprouts cooking process.
+
+2.Promise.all:
+Promise.all ensures that all the promises are resolved before proceeding. If any promise is rejected, the catch block will handle the error.
+
+3..then() with forEach:
+Once all promises resolve, the .then() block iterates over the resolved values (cooking steps) and appends them in order to the #brusselsSprouts list.
+
+4.Final Message:
+After appending all steps, an additional <li> with the text "Brussels sprouts are ready!" is added.
+
+5.Reveal Image:
+The image for Brussels Sprouts is revealed by removing the hidden attribute from the corresponding <img> element.
+
+Output:
+The browser will display all the steps for cooking Brussels Sprouts in the correct order, followed by the "Brussels sprouts are ready!" message, and the image of Brussels Sprouts will appear.
+*/
